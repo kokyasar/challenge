@@ -39,7 +39,7 @@ public class ChallengeController {
     @PostMapping("/show-hints")
     public ResponseEntity<MinesweeperResponseDTO> minesweeper(@RequestBody MinesweeperRequestDTO requestDTO){
 
-        MinesweeperUseCase useCase = MinesweeperUseCase.builder().field(requestDTO.getField()).build();
+        MinesweeperUseCase useCase = MinesweeperUseCase.builder().square(requestDTO.getSquare()).build();
         MinesweeperAggregate aggregate = minesweeperUseCaseHandler.handle(useCase);
         MinesweeperResponseDTO responseDTO = MinesweeperResponseDTO.builder().hints(aggregate.getHints()).build();
 

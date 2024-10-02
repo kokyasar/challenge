@@ -9,5 +9,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class MinesweeperRequestDTO {
 
-    private String[] field;
+    private String[] square;
 }
