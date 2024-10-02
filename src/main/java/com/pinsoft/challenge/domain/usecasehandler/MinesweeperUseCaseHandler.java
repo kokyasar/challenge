@@ -32,7 +32,9 @@ public class MinesweeperUseCaseHandler {
             hintField[i] = new String(result[i]);
         }
 
-        return MinesweeperAggregate.builder().hints(hintField).build();
+        return MinesweeperAggregate.builder()
+                .hints(hintField)
+                .build();
     }
 
     private static int countMines(String[] square, int row, int col) {

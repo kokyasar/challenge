@@ -32,7 +32,9 @@ public class RpnCalculatorUseCaseHandler {
             }
         }
 
-        return RpnCalculatorAggregate.builder().result(rpnStack.pop()).build();
+        return RpnCalculatorAggregate.builder()
+                .result(rpnStack.pop())
+                .build();
     }
     private static boolean isNumeric(String token) {
         try {
